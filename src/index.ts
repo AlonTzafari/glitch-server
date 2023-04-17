@@ -1,4 +1,5 @@
 import http from 'http';
+import path from 'path';
 import express from 'express';
 import WebSocket, {WebSocketServer} from 'ws';
 import {v4} from 'uuid';
@@ -13,7 +14,7 @@ const SSL = process.env.SSL === 'true' || false;
 
 
 const app = express();
-app.use(express.static('../public'));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 app.get('/', (req, res) => {
     res.status(200).send("OK");
 });

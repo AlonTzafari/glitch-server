@@ -2,12 +2,11 @@
     "name": "glitch-server",
     "version": "1.0.0",
     "description": "glitch game signaling server",
-    "type": "module",
     "main": "dist/index.js",
     "scripts": {
         "test": "jest",
         "build": "tsc",
-        "start": "ts-node src/index.ts",
+        "start": "ts-node --project tsconfig.json src/index.ts",
         "glitch-setup": "echo glitch-setup"
     },
     "engines": {
