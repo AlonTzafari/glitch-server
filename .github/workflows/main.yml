@@ -12,7 +12,7 @@ jobs:
       env:
         SOURCE_REPO: "https://github.com/AlonTzafari/glitch-server.git"
         SOURCE_BRANCH: "main"
-        DESTINATION_REPO: ${{ secrets.GLITCH_GIT_URL }}
+        DESTINATION_REPO: ${{ secrets.GLITCH_GIT }}
         DESTINATION_BRANCH: "master"
       with:
         args: $SOURCE_REPO $SOURCE_BRANCH $DESTINATION_REPO $DESTINATION_BRANCH
