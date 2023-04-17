@@ -14,8 +14,6 @@ app.get('/health', (req, res) => {
     res.status(200).send("OK");
 });
 
-//comment4
-
 app.listen(PORT, () => {
     console.log(`server ready at ${SSL ? 'https' : 'http'}://${HOST}`);
 })
