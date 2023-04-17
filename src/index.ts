@@ -11,5 +11,5 @@ app.get('/health', (req, res) => {
 });
 
 app.listen(PORT, HOST, () => {
-    console.log(`server ready at ${SSL ? 'https' : 'http'}://${HOST}:${PORT}`);
+    console.log(`server ready at ${SSL ? 'https' : 'http'}://${HOST}:${PORT}/health`);
 })
