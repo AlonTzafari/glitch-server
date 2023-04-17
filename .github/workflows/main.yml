@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: repo-sync
-      uses: wei/git-sync@v1
+      uses: wei/git-sync@v3
       env:
         SOURCE_REPO: "https://github.com/AlonTzafari/glitch-server.git"
         SOURCE_BRANCH: "main"
