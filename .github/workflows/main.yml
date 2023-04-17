@@ -9,10 +9,8 @@ jobs:
     steps:
     - name: repo-sync
       uses: wei/git-sync@v3
-      env:
-        SOURCE_REPO: "https://github.com/AlonTzafari/glitch-server.git"
-        SOURCE_BRANCH: "main"
-        DESTINATION_REPO: ${{ secrets.GLITCH_GIT }}
-        DESTINATION_BRANCH: "master"
       with:
-        args: $SOURCE_REPO $SOURCE_BRANCH $DESTINATION_REPO $DESTINATION_BRANCH
+        source_repo: "https://github.com/AlonTzafari/glitch-server.git"
+        source_branch: "main"
+        destination_repo: ${{ secrets.GLITCH_GIT }}
+        destination_branch: "master"
