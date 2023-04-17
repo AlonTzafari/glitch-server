@@ -10,8 +10,12 @@ app.get('/health', (req, res) => {
     res.status(200).send("OK");
 });
 
-//comment2
+app.get('/health', (req, res) => {
+    res.status(200).send("OK");
+});
 
-app.listen(PORT, HOST, () => {
-    console.log(`server ready at ${SSL ? 'https' : 'http'}://${HOST}:${PORT}/health`);
+//comment3
+
+app.listen(PORT, () => {
+    console.log(`server ready at ${SSL ? 'https' : 'http'}://${HOST}`);
 })

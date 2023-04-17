@@ -6,8 +6,11 @@ const app = express();
 app.get('/health', (req, res) => {
     res.status(200).send("OK");
 });
-//comment2
-app.listen(PORT, HOST, () => {
-    console.log(`server ready at ${SSL ? 'https' : 'http'}://${HOST}:${PORT}/health`);
+app.get('/health', (req, res) => {
+    res.status(200).send("OK");
+});
+//comment3
+app.listen(PORT, () => {
+    console.log(`server ready at ${SSL ? 'https' : 'http'}://${HOST}`);
 });
 //# sourceMappingURL=index.js.map
