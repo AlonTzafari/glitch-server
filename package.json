@@ -9,7 +9,7 @@
     "copy-web": "rm -rf packages/server/public/* && cp -r packages/web/dist/* packages/server/public",
     "start": "npm start -w server",
     "glitch-build-web": "cd packages/web && npm install && npm run build",
-    "glitch-build-server": "cd packages/server && npm install && npm run build",
+    "glitch-build-server": "npm run --prefix=./packages/server install && npm run --prefix=./packages/server build",
     "glitch-setup": "npm run glitch-build-server && git add . && git commit -m \"clean working dir\""
   },
   "engines": {
