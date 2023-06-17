@@ -1,43 +1,37 @@
 {
-    "name": "glitch-server",
-    "version": "1.0.0",
-    "description": "glitch game signaling server",
-    "main": "dist/index.js",
-    "scripts": {
-        "test": "jest",
-        "build": "tsc",
-        "start": "node --enable-source-maps dist/index.js",
-        "glitch-setup": "npm install && npm run build"
-    },
-    "engines": {
-        "node": "16.x"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/AlonTzafari/glitch-server.git"
-    },
-    "keywords": [
-        "glitch",
-        "game",
-        "signaling"
-    ],
-    "author": "Alon Tzafari",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/AlonTzafari/glitch-server/issues"
-    },
-    "homepage": "https://github.com/AlonTzafari/glitch-server#readme",
-    "dependencies": {
-        "express": "^4.18.2",
-        "uuid": "^9.0.0",
-        "ws": "^8.13.0"
-    },
-    "devDependencies": {
-        "@types/express": "^4.17.17",
-        "@types/uuid": "^9.0.1",
-        "@types/ws": "^8.5.4",
-        "jest": "^29.5.0",
-        "ts-node": "^10.9.1",
-        "typescript": "^5.0.4"
-    }
+  "name": "glitch-server",
+  "version": "1.0.0",
+  "description": "glitch game signaling",
+  "scripts": {
+    "lint": "nx run-many -t lint",
+    "test": "nx run-many -t test",
+    "build": "nx run-many -t build",
+    "copy-web": "rm -rf packages/server/public/* && cp -r packages/web/dist/* packages/server/public",
+    "start": "npm start -w server",
+    "glitch-setup": "npm install && npm run build && npm run copy-web"
+  },
+  "engines": {
+    "node": "^16 || ^18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlonTzafari/glitch-server.git"
+  },
+  "keywords": [
+    "glitch",
+    "game",
+    "signaling"
+  ],
+  "author": "Alon Tzafari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlonTzafari/glitch-server/issues"
+  },
+  "homepage": "https://github.com/AlonTzafari/glitch-server#readme",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "nx": "16.3.2"
+  }
 }
