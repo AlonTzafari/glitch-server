@@ -10,7 +10,7 @@
     "start": "npm start -w server",
     "glitch-build-web": "cd packages/web && npm install && npm run build",
     "glitch-build-server": "cd packages/server && npm install && npm run build",
-    "glitch-setup": "npm run glitch-build-server && npm run glitch-build-web && npm run copy-web"
+    "glitch-setup": "npm run glitch-build-server"
   },
   "engines": {
     "node": "^16"
